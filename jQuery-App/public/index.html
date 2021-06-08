@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Programs List</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="javascripts/script.js"></script>
+  </head>
+  <body>
+
+    <div data-role="page" id="home">
+      <!-- header -->
+      
+      <div data-role="header" data-theme='a'>
+        <h2>My Home of Programs</h2>
+        <div data-role="navbar" data-theme='b'>
+          <ul>          
+            <li><a href="#stats">Stats</a></li>
+            <li><a href="#add">Add Shows & Movies</a></li>
+            <li><a href="#list">Programs List</a></li>
+          </ul>
+        </div><!-- /navbar -->
+        <div class='centering'>
+          <img src='icon.jpg'>
+          </div>
+      </div>
+
+      <!-- content -->
+      <div class='centering'>
+        <img src="Movie.jpg" class='centering'>
+      </div>
+      <div data-role="content" data-theme='b' class="contents">
+          <div id="homeDiv">
+            <div data-role="content" data-theme='b' class="contents">
+              Add shows you've watched or finished and give them ratings!
+              In the future it would be a cool idea to have a database of released and upcoming movies and have them viewable by users and also let them add/rate them on those pages.
+            </div>
+            Save your Movie and TV shows for your future reference.<br>
+            All you have to do is go to <a href="#add">Add Shows & Movies</a>
+          </div>
+
+      </div>
+
+      <!-- notes footer -->
+      <div data-role="footer" data-theme='a'>
+        <div class='centering'>
+          <img src='footerImg.jpg'>
+        </div>
+        <h3>Copyright 2021 by Eric Geagan & Rajendra Pokhrel</h3>
+      </div>
+    </div>
+
+    <!-- ============================================================================= -->
+    <!-- ==========================STATS=============================================== -->
+    <!-- ============================================================================= -->
+
+    <div data-role="page" id="stats">
+      <!-- header -->
+      
+      <div data-role="header" data-theme='c'>
+        <h2>Virtual Entertinment Center</h2>
+        <div data-role="navbar" data-theme='e' id="nav_bar">
+          <ul>          
+            <li><a href="#stats">Stats</a></li>
+            <li><a href="#add">Add Shows & Movies</a></li>
+            <li><a href="#list">Programs List</a></li>
+           
+          </ul>
+        </div><!-- /navbar -->
+        <div class='centering'>
+         <img src='icon.jpg'>
+          </div>
+      </div>
+
+      <!-- content -->
+      
+      <div data-role="content" data-theme='c'>
+        <p> Here are your stats</p>
+        <div class='statBlock'>
+          <div >Average Score:</div>
+          <div id="averageScore" class='stat'></div>
+        </div>
+        <div class='statBlock'>
+          <div >Movies Watched:</div>
+          <div id="numMovies" class='stat'></div>
+        </div>
+        <div class='statBlock'>
+          <div >TV Series Watched:</div>
+          <div id="numTV" class='stat'></div>
+        </div>
+        <div class='statBlock'>
+          <div >Shows Finished:</div>
+          <div id="numFinished" class='stat'></div>
+        </div>
+        <div class='statBlock'>
+          <div >Shows Watching:</div>
+          <div id="numWatching" class='stat'></div>
+        </div>
+        <div class='statBlock'>
+          <div >Shows Planning to Watch:</div>
+          <div id="numPlanToWatch" class='stat'></div>
+        </div>        
+      </div>
+      
+
+      <!-- notes footer -->
+      <div data-role="footer" data-theme='a'>
+        <div class='centering'>
+          <img src='footerImg.jpg'>
+        </div>
+        <h3>Copyright 2021 by Eric Geagan & Rajendra Pokhrel</h3>
+      </div>
+    </div>
+
+    <!-- ============================================================================== -->
+    <!-- ==============================ADD============================================= -->
+    <!-- ============================================================================== -->
+
+    <div data-role="page" id="add">
+      <!-- header -->
+      <div data-role="header" data-theme='a'>
+        <h2>Add a Show</h2>
+        <div data-role="navbar" data-theme='b'>
+          <ul>
+            <li><a href="#stats">Stats</a></li>
+            <li><a href="#add">Add Shows & Movies</a></li>
+            <li><a href="#list">Programs List</a></li>
+          </ul>
+        </div><!-- /navbar -->
+        <div class='centering'>
+          <img src='icon.jpg'>
+        </div>
+      </div>
+
+      <!-- content -->
+      <div data-role="content" data-theme='e'>
+        <label for="showName">Enter Show Name:</label>
+        <input type="text" value="" id="showName"/>
+        <label for="type">Select a Type</label>
+        <select name="type" id="type">
+          <option value="Movie">Movie</option>
+          <option value="TV Series">TV Series</option>
+        </select>
+        <label for="status">Current Status:</label>
+        <select name="status" id="status">
+          <option value="Watching">Watching</option>
+          <option value="Completed">Completed</option>
+          <option value="Dropped">Dropped</option>
+          <option value="Plan to Watch">Plan to Watch</option>
+        </select>
+        <label for="rating">Rating:</label>
+        <select name="rating" id="rating">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+        <label for='url'>URL:</label>
+        <input type='text' value='' id='url'/>
+        <input type="button" value="Click To Add Show" data-theme="b" id="buttonAdd" onClick='formSubmitEvent()' />
+      </div>
+
+      <!-- notes footer -->
+      <div data-role="footer" data-theme='a'>
+        <div class='centering'>
+          <img src='footerImg.jpg'>
+        </div>
+        <h3>Copyright 2021 by Eric Geagan & Rajendra Pokhrel</h3>
+      </div>
+    </div>
+
+    <!-- ============================================================================ -->
+    <!-- ==============================LIST========================================== -->
+    <!-- ============================================================================ -->
+
+    <div data-role="page" id="list">
+      <!-- header -->
+      <div data-role="header" data-theme='a'>
+        <h2>List of Shows</h2>
+        <div data-role="navbar" data-theme='e'>
+          <ul>
+            <li><a href="#stats">Stats</a></li>
+            <li><a href="#add">Add Shows & Movies</a></li>
+            <li><a href="#list">Programs List</a></li>
+            
+          </ul>
+        </div><!-- /navbar -->
+        <div class='centering'>
+          <img src='icon.jpg'>
+        </div>
+      </div>
+
+      <div data-role="content" data-theme='c'>
+        <p>Your added movies are listed below.</p>
+        <p><b>Note:</b> You can click on each of them to open the URL provided IF one has been. (If none was provided it will search IMDB automatically)</p>
+      </div>
+
+      <!-- content -->
+      <div data-role="content" data-theme='a'>
+        <div id ="linkList">
+
+        </div>
+      
+          <ul id="listId"></ul>
+      </div>
+
+      <!-- notes footer -->
+      <div data-role="footer" data-theme='a'>
+        <div class='centering'>
+          <img src='footerImg.jpg'>
+        </div>
+        <h3>Copyright 2021 by Eric Geagan & Rajendra Pokhrel</h3>
+      </div>
+    </div>
+    
+    <p id="IDparmHere" hidden>change1</p>
+  </body>
+</html>

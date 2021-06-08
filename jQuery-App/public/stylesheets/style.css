@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300&display=swap');
+body {font-family: 'Open Sans', sans-serif;}
+h2
+{
+  
+  font-family: 'Open Sans';
+  font-weight:    bold;
+  color:  rgb(31, 86, 158);
+}
+
+.contents {text-align: center;font-family: 'Open Sans';
+    font-size: 1.5em;
+    color:  rgb(49, 49, 49);}
+
+.centering {
+ height: 10em;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+      }
+
+#homeDiv{
+  background-color: blue;
+}
+
+.statBlock {
+  text-align: left;
+}
+
+.statBlock > div {
+  vertical-align: top;
+  display: inline-block;
+}
+
+      
+      
