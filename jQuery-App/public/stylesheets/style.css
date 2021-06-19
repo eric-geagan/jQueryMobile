@@ -32,5 +32,11 @@ h2
   display: inline-block;
 }
 
+.item {
+  display: flex;
+}
       
+.itemText {
+  padding-left: 10px;
+}
       

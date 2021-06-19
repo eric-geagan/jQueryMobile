@@ -57,7 +57,11 @@ function showEntries() {
       item.URL = 'https://www.imdb.com/find?q=' + searchItem + '&ref_=nv_sr_sm'
     }
     let newElement = document.createElement('li')
-    newElement.addEventListener('click', 
+    let listItem = document.createElement('li')
+    let deleteButton = document.createElement('button')
+    let content = document.createElement('div')
+
+    content.addEventListener('click', 
       function (event) {
         event.preventDefault()
         if (confirm('You are about to open a new window. Please confirm.')) {
@@ -65,7 +69,19 @@ function showEntries() {
         }
       },
       false)
-    newElement.innerHTML = text
+    content.innerHTML = text
+    content.className = 'itemText'
+    deleteButton.onclick = function() { 
+      let listIndex = Array.prototype.indexOf.call(newElement.parentNode, newElement)
+      list.splice(0, 1)
+      newElement.parentNode.removeChild(newElement) 
+    }
+    deleteButton.innerHTML = 'X'
+
+    newElement.appendChild(deleteButton)
+    newElement.appendChild(content)
+    newElement.className = 'item'
+
     // Add it to the unordered list
     parent.append(newElement);
   })
@@ -99,7 +115,6 @@ function showValues() {
     $('#numPlanToWatch').append(numPlanToWatch)
   }
 }
-
 
 
 
